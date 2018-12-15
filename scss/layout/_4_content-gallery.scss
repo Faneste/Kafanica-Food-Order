@@ -1,0 +1,88 @@
+.content_gallery-container {
+  overflow: hidden;
+  margin-top: 50px;
+  width: 100%;
+  padding-bottom: 30px;
+  // height: 900px;
+  background-color: $white;
+  @include shadowBorder;
+}
+
+.content_gallery-container__title-main-container {
+  width: 100%;
+  background-color: $light-brown;
+}
+
+.content_gallery-container__title-main-container__title {
+  color: $white;
+  font-size: 1.5em;
+  margin-left: 10px;
+  &:before {
+    content: "\f302";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+  }
+}
+
+.content_gallery-container__gallery {
+  background-color: $gray2;
+  padding: 15px;
+  border-bottom: 2px solid $dark-brown;
+}
+
+.slides {
+  width: 100%;
+}
+
+.content_gallery-container__gallery__button {
+  font-size: 3em;
+  // position: absolute;
+  margin-top: -50px;
+  border: none;
+  color: $light-brown;
+  background-color: $gray2;
+  border-radius: 30px;
+  height: 50px;
+  margin-bottom: -13px;
+  // margin: 0px auto;
+  &:active {
+    color: $white;
+  }
+}
+
+.content_gallery-container__text-container {}
+
+.content_gallery-container__text-container__title {
+  font-size: 1.5em;
+  color: $light-brown;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.content_gallery-container__text-container__text {
+  margin-left: 10px;
+  padding-right: 30px;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

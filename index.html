@@ -28,21 +28,123 @@
     <li><a>Informacije</a></li>
     <li><a>Galerija</a></li>
     <li><a>Utisci</a></li>
-    <div class="header__flag__image">
-      <img class="header__flag__image__img" src="img/english-flag.png" alt="english-flag">
+    <div class="header__flag-image">
+      <img class="header__flag-image__img" src="img/english-flag.png" alt="english-flag">
     </div>
   </ul>
 </header>
 
 <div class="container">
-  <div class="category">xcxcxc</div>
-  <div class="content">xcxcxc</div>
-  <div class="shopping-cart">xcxcxc</div>
+  <div class="category"></div>
+  <div class="content">
+    <!--/////////////////////// Utisci //////////////////////////-->
+    <div class="content__utisci-container">
+      <!-- utisci title -->
+      <div class="content__utisci-container__title-main-container">
+        <h1 class="content__utisci-container__title-main-container__title">Utisci</h1>
+      </div>
+      <!-- utisci comment field -->
+      <div class="content__utisci-container__comment-container">
+        <h2 class="content__utisci-container__comment-container__comment-title">petar petrović</h2>
+        <span class="content__utisci-container__comment-container__star-container__date">13.05.2018</span>
+        <div class="content__utisci-container__comment-container__comment-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s
+        </div>
+        <div class="content__utisci-container__comment-container__star-container">
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star"></i>
+
+        </div>
+      </div>
+      <!-- utisci comment field -->
+      <div class="content__utisci-container__comment-container">
+        <h2 class="content__utisci-container__comment-container__comment-title">petar petrović</h2>
+        <span class="content__utisci-container__comment-container__star-container__date">13.05.2018</span>
+        <div class="content__utisci-container__comment-container__comment-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s
+        </div>
+        <div class="content__utisci-container__comment-container__star-container">
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <!-- utisci comment field -->
+      <div class="content__utisci-container__comment-container">
+        <h2 class="content__utisci-container__comment-container__comment-title">petar petrović</h2>
+        <span class="content__utisci-container__comment-container__star-container__date">13.05.2018</span>
+        <div class="content__utisci-container__comment-container__comment-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+          the industry's standard dummy text ever since the 1500s
+        </div>
+        <div class="content__utisci-container__comment-container__star-container">
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star yellow-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+      <!-- e-mail form -->
+      <div class="content__utisci-container__form-container">
+        <form action="">
+          <label for="name">Puno Ime</label>
+          <input class="content__utisci-container__form-container__input" type="text" id="name" name="name" placeholder="puno ime">
+
+          <label for="email">E-mail</label>
+          <input class="content__utisci-container__form-container__input" type="text" id="email" name="lastname" placeholder="e-mail">
+
+          <label for="comment">Tekst Komentara</label>
+          <input class="content__utisci-container__form-container__input input--comment" type="text" id="comment" name="lastname" placeholder="tekst komentara...">
+
+          <input class="content__utisci-container__form-container__input" type="submit" value="Postavite komentar">
+        </form>
+      </div>
+    </div>
+    <!--/////////////////////// End Utisci //////////////////////////-->
+    <!--/////////////////////// Gallery ///////////////////////-->
+    <div class="content_gallery-container">
+      <div class="content_gallery-container__title-main-container">
+        <h1 class="content_gallery-container__title-main-container__title">Galerija</h1>
+      </div>
+      <div class="content_gallery-container__gallery">
+          <img class="slides" src="img/gallery/1.jpg">
+          <img class="slides" src="img/gallery/2.jpg">
+          <img class="slides" src="img/gallery/3.jpg">
+          <img class="slides" src="img/gallery/4.jpg">
+
+          <button class="content_gallery-container__gallery__button" onclick="plusDivs(-1)"><i class="fas fa-arrow-alt-circle-left"></i></i></button>
+          <button class="content_gallery-container__gallery__button" onclick="plusDivs(1)"><i class="fas fa-arrow-alt-circle-right"></i></button>
+      </div>
+      <div class="content_gallery-container__text-container">
+        <h1 class="content_gallery-container__text-container__title">Lorem Ipsum:</h1>
+        <p class="content_gallery-container__text-container__text">
+          Lorem Ipsum is simply dummy text of the printing and
+          typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+          printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+          but also the leap into electronic typesetting, remaining essentially unchanged.
+        </p>
+      </div>
+    </div>
+    <!--/////////////////////// End Gallery ///////////////////////-->
+
+  </div>
+  <div class="shopping-cart"></div>
 </div>
 
 <footer>
-  <div class="footer__logo__container">
-    <img class="footer__logo" src="img/header-logo.png" alt="footer-logo">
+  <div class="footer__logo-container">
+    <img class="footer__logo-container__logo" src="img/header-logo.png" alt="footer-logo">
 
     <div class="footer-social">
       <i class="fab fa-facebook"></i>
@@ -57,6 +159,6 @@
 </footer>
 
 
-
+<script src="js/main.js"></script>
 </body>
 </html>

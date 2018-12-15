@@ -1,0 +1,9 @@
+@mixin shadowBorder {
+  -webkit-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.23);
+  -moz-box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.23);
+  box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.23);
+
+  border-radius: 5px;
+
+  border-bottom: 13px solid $gray1;
+}

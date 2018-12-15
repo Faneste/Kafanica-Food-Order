@@ -1,6 +1,7 @@
 footer {
   height: 155px;
   width: 100%;
+  margin-top: 60px;
   // position: absolute;
   bottom: 0;
 
@@ -8,12 +9,12 @@ footer {
   background-position: center bottom;
 }
 
-.footer__logo__container {
+.footer__logo-container {
   max-width: 1600px;
   margin: 0px auto;
 }
 
-.footer__logo {
+.footer__logo-container__logo {
   float: left;
   width: 330px;
   height: auto;
