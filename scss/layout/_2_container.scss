@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  height: 1100px;
+  max-width: 1600px;
+  margin: 0px auto;
+
+  grid-template-columns: 230px auto 300px;
+  grid-template-areas:
+  "category content cartMenu";
+}
