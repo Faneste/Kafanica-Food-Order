@@ -1,0 +1,101 @@
+.category {
+  grid-area: category;
+  background-color: red;
+
+  overflow: hidden;
+  margin: 0px auto;
+  margin-top: 50px;
+  width: 90%;
+  padding-bottom: 30px;
+  background-color: $white;
+  @include shadowBorder;
+}
+
+.category__title-main-container {
+  width: 100%;
+  background-color: $gray1;
+}
+
+.category__title-main-container__title {
+  color: $black;
+  font-size: 1.2em;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  margin-left: 6px;
+  &:before {
+    content: "\f00b";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+  }
+}
+// item
+.category__list-item {
+  border-bottom: 1px solid $gray2;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  &:hover {
+    h3 {
+      color: $black;
+    }
+    cursor: pointer;
+    background-color: $gray1;
+  }
+}
+
+.category__list-item__item {
+  font-weight: 400;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: $gray3;
+  &:hover {
+    &:after {
+      float: right;
+      content: "\f13a";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      font-size: 0.7em;
+      // padding-left: 5px;
+      padding-right: 7px;
+      padding-top: 5px;
+      color: $light-brown;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

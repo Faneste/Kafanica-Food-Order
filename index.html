@@ -35,7 +35,58 @@
 </header>
 
 <div class="container">
-  <div class="category"></div>
+  <!--/////////////////////// Category ///////////////////////-->
+  <div class="category">
+    <!-- title -->
+    <div class="category__title-main-container">
+      <h1 class="category__title-main-container__title">kategorije</h1>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Doručak</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Hladno predjelo</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Toplo predjelo</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Salate</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Obrok salate</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Pice</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Paste</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Burgeri</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Roštilj</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Riba</h3>
+    </div>
+    <!-- item -->
+    <div class="category__list-item">
+      <h3 class="category__list-item__item">Deserti</h3>
+    </div>
+  </div>
+  <!--/////////////////////// End Category ///////////////////////-->
   <div class="content">
     <!--/////////////////////// Utisci //////////////////////////-->
     <div class="content__utisci-container">
@@ -113,22 +164,22 @@
     </div>
     <!--/////////////////////// End Utisci //////////////////////////-->
     <!--/////////////////////// Gallery ///////////////////////-->
-    <div class="content_gallery-container">
-      <div class="content_gallery-container__title-main-container">
-        <h1 class="content_gallery-container__title-main-container__title">Galerija</h1>
+    <div class="content__gallery-container">
+      <div class="content__gallery-container__title-main-container">
+        <h1 class="content__gallery-container__title-main-container__title">Galerija</h1>
       </div>
-      <div class="content_gallery-container__gallery">
+      <div class="content__gallery-container__gallery">
           <img class="slides" src="img/gallery/1.jpg">
           <img class="slides" src="img/gallery/2.jpg">
           <img class="slides" src="img/gallery/3.jpg">
           <img class="slides" src="img/gallery/4.jpg">
 
-          <button class="content_gallery-container__gallery__button" onclick="plusDivs(-1)"><i class="fas fa-arrow-alt-circle-left"></i></i></button>
-          <button class="content_gallery-container__gallery__button" onclick="plusDivs(1)"><i class="fas fa-arrow-alt-circle-right"></i></button>
+          <button class="content__gallery-container__gallery__button" onclick="plusDivs(-1)"><i class="fas fa-arrow-alt-circle-left"></i></i></button>
+          <button class="content__gallery-container__gallery__button" onclick="plusDivs(1)"><i class="fas fa-arrow-alt-circle-right"></i></button>
       </div>
-      <div class="content_gallery-container__text-container">
-        <h1 class="content_gallery-container__text-container__title">Lorem Ipsum:</h1>
-        <p class="content_gallery-container__text-container__text">
+      <div class="content__gallery-container__text-container">
+        <h1 class="content__gallery-container__text-container__title">Lorem Ipsum:</h1>
+        <p class="content__gallery-container__text-container__text">
           Lorem Ipsum is simply dummy text of the printing and
           typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
           printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
@@ -137,9 +188,43 @@
       </div>
     </div>
     <!--/////////////////////// End Gallery ///////////////////////-->
-
+    <!--/////////////////////// Menu ///////////////////////-->
+    <div class="content__menu-container">
+      <div class="content_menu-container__title-main-container">
+        <h1 class="content_menu-container__title-main-container__title">Jelovnik</h1>
+      </div>
+      <!-- category -->
+      <div class="content_menu-container__category-title">
+        <h1 class="content_menu-container__category-title__title">Jelovnik</h1>
+      </div>
+      <!-- item -->
+      <div class="content__menu-container__item-container">
+        <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
+        <h3 class="content__menu-container__item-container__item-ingredients">
+          1326 kalorija | Omlet od tri jaja sa sunkom, paprikom i lukom.
+        </h3>
+        <div class="content__menu-container__item-container__price-button-container">
+          <h3 class="content__menu-container__item-container__item-price">180,00rsd</h3>
+          <button class="content__menu-container__item-container__order-button"><i class="fas fa-plus-square"></i></button>
+        </div>
+      </div>
+      <!-- item -->
+      <div class="content__menu-container__item-container">
+        <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
+        <h3 class="content__menu-container__item-container__item-ingredients">
+          1326 kalorija | Omlet od tri jaja sa sunkom, paprikom i lukom.
+        </h3>
+        <div class="content__menu-container__item-container__price-button-container">
+          <h3 class="content__menu-container__item-container__item-price">180,00rsd</h3>
+          <button class="content__menu-container__item-container__order-button"><i class="fas fa-plus-square"></i></button>
+        </div>
+      </div>
+    </div>
+    <!--/////////////////////// End Menu ///////////////////////-->
   </div>
+  <!--/////////////////////// Shopping Cart ///////////////////////-->
   <div class="shopping-cart"></div>
+  <!--/////////////////////// End Shopping Cart ///////////////////////-->
 </div>
 
 <footer>

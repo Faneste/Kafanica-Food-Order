@@ -6,6 +6,9 @@
   // height: 900px;
   background-color: $white;
   @include shadowBorder;
+
+  display: none;
+
 }
 
 .content__utisci-container__title-main-container {
