@@ -2,7 +2,7 @@
   overflow: hidden;
   margin-top: 50px;
   width: 100%;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   // height: 900px;
   background-color: $white;
   @include shadowBorder;
@@ -11,6 +11,7 @@
 .content_menu-container__title-main-container {
   width: 100%;
   background-color: $light-brown;
+  padding-bottom: 2px;
 }
 
 .content_menu-container__title-main-container__title {
@@ -29,13 +30,15 @@
 // items and item titles
 .content_menu-container__category-title {
   width: 100%;
-  background-color: $gray1;
+  background-color: $light-brown;
+  border-top: 2px solid $white;
+  margin-top: -2px;
   padding-bottom: 3px;
   padding-top: 3px;
 }
 
 .content_menu-container__category-title__title {
-  color: $light-brown;
+  color: $white;
   font-size: 1em;
   margin-left: 10px;
   text-transform: uppercase;

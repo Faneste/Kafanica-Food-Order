@@ -1,0 +1,107 @@
+.shopping-cart {
+  grid-area: cartMenu;
+  // background-color: red;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
+
+  overflow: hidden;
+  margin: 0px auto;
+  margin-top: 50px;
+  width: 90%;
+  height: auto;
+  // padding-bottom: 30px;
+  background-color: $white;
+  @include shadowBorder;
+}
+
+.shopping-cart__title-main-container {
+  width: 100%;
+  background-color: $gray1;
+}
+
+.shopping-cart__title-main-container__title {
+  color: $black;
+  font-size: 1.2em;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  margin-left: 6px;
+  &:before {
+    content: "\f07a";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+  }
+}
+
+// item
+
+.shopping-cart__item {
+  border-bottom: 1px solid $gray2;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+.shopping-cart__item-title {
+  font-weight: 400;
+}
+
+.shopping-cart__item-ingredients {
+  font-weight: 400;
+  color: $gray3;
+  font-size: 1em;
+}
+
+.shopping-cart__item-price {
+  // margin-top: 5px;
+  font-size: 1.4em;
+}
+
+.shopping-cart__item__delete-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.3em;
+  float: right;
+  margin-right: 8px;
+  position: relative;
+  margin-top: -25px;
+  &:hover {
+    color: $light-brown;
+    cursor: pointer;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+// combined price
+
+.shopping-cart__combined-price {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

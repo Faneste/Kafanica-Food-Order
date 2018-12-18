@@ -1,12 +1,16 @@
 .category {
   grid-area: category;
-  background-color: red;
+  // background-color: red;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 50px;
 
   overflow: hidden;
   margin: 0px auto;
   margin-top: 50px;
   width: 90%;
-  padding-bottom: 30px;
+  height: auto;
+  // padding-bottom: 30px;
   background-color: $white;
   @include shadowBorder;
 }
