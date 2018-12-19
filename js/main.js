@@ -40,11 +40,18 @@ function pasteScroll(){ paste.scrollIntoView({ behavior: 'smooth' })}
 
 //////////// End Scroll Into View Menu
 
+//////////// Google Map
 
+var map;
 
+function initMap() {
+  map = new google.maps.Map(document.getElementById('google-map-holder'), {
+    center: {lat: 44.011315, lng: 20.911604},
+    zoom: 15
+  });
+}
 
-
-
+//////////// End Google Map
 
 
 

@@ -1,0 +1,84 @@
+.banner {
+  overflow: hidden;
+  margin: 0px auto;
+  // margin-top: 50px;
+  background-color: $white;
+}
+
+.banner__title-main-container {
+  width: 100%;
+  background-color: $gray1;
+}
+
+.banner__title-main-container__title {
+  color: $black;
+  font-size: 1.2em;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  margin-left: 6px;
+  &:before {
+    content: "\f2e7";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 15px;
+  }
+}
+
+.banner__subtitle-main-container {
+  width: 100%;
+  border-bottom: 1px solid $gray2;
+}
+
+.banner__subtitle-main-container__title {
+  color: $light-brown;
+  font-size: 1.2em;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+.banner__picture-container {
+  padding: 10px;
+  border-bottom: 1px solid $gray2;
+}
+
+.banner__picture-container__img {
+  width: 100%;
+  height: auto;
+}
+
+.banner__ingredients-price-main-container {
+  border-bottom: 1px solid $gray2;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.banner__ingredients-price-main-container__ingredients {
+  color: $gray3;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
