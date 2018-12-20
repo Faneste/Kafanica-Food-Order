@@ -6,6 +6,10 @@
   // height: 900px;
   background-color: $white;
   @include shadowBorder;
+  @media screen and (max-width: 800px) {
+    position: relative;
+    // margin-top: auto;
+  }
 }
 
 .content_menu-container__title-main-container {

@@ -13,6 +13,9 @@
   // padding-bottom: 30px;
   background-color: $white;
   @include shadowBorder;
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .category__title-main-container {

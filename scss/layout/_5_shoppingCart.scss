@@ -13,6 +13,13 @@
   // padding-bottom: 30px;
   background-color: $white;
   @include shadowBorder;
+  @media screen and (max-width: 800px) {
+    grid-area: shopping-cart;
+    position: relative;
+    margin-top: 0px;
+    // top: 20px;
+    width: 100%;
+  }
 }
 
 .shopping-cart__title-main-container {

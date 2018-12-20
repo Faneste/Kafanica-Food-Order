@@ -8,4 +8,13 @@
   grid-template-areas:
   "category content cartMenu";
   align-items: start;
+  @media screen and (max-width: 800px) {
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "shopping-cart"
+    "mobile-menu";
+    grid-template-rows: auto auto;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
 }

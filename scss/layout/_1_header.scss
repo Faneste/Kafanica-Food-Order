@@ -17,6 +17,9 @@ header {
   margin-top: 50px;
   width: 550px;
   height: auto;
+  @media screen and (max-width: 800px) {
+    width: 80%;
+  }
 }
 
 .header__adress {
