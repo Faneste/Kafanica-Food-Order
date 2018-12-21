@@ -6,6 +6,9 @@ body {
 	margin: 0;
 	background: url("../img/background.jpg") repeat;
 	background-attachment: fixed;
+
+	min-width: 370px;
+	width: auto !important;
 }
 
 // disable draging images

@@ -22,6 +22,19 @@ function showDivs(n) {
 
 //////////// Scroll Into View Menu
 
+// Header Scroll
+let jelovnik = document.getElementById("jelovnik-scroll");
+let informacije = document.getElementById("informacije-scroll");
+let galerija = document.getElementById("galerija-scroll");
+let utisci = document.getElementById("utisci-scroll");
+
+function jelovnikScroll(){ jelovnik.scrollIntoView({ behavior: 'smooth' })}
+function informacijeScroll(){ informacije.scrollIntoView({ behavior: 'smooth' })}
+function galerijaScroll(){ galerija.scrollIntoView({ behavior: 'smooth' })}
+function utisciScroll(){ utisci.scrollIntoView({ behavior: 'smooth' })}
+// End Header Scroll
+
+// Category Scroll
 let dorucak = document.getElementById("dorucak-menu-scroll");
 let hladnoPredjelo = document.getElementById("hladno-predjelo-menu-scroll");
 let toploPredjelo = document.getElementById("toplo-predjelo-menu-scroll");
@@ -37,6 +50,7 @@ function salateScroll(){ salate.scrollIntoView({ behavior: 'smooth' })}
 function obrokSalateScroll(){ obrokSalate.scrollIntoView({ behavior: 'smooth' })}
 function piceScroll(){ pice.scrollIntoView({ behavior: 'smooth' })}
 function pasteScroll(){ paste.scrollIntoView({ behavior: 'smooth' })}
+// End Category Scroll
 
 //////////// End Scroll Into View Menu
 
@@ -54,7 +68,31 @@ function initMap() {
 //////////// End Google Map
 
 
-
+// za translate sample kod
+//
+// <body>
+// <select id="langselector" onchange="loadlang()">
+//   <option value="en">Engleski</option>
+//   <option value="sr">Srpski</option>
+// </select>
+// <p></p>
+//   <p id="paragraf">srpski</p>
+// <script>
+// function loadlang()
+//   {
+//   var lng = document.getElementById("langselector").value;
+//   var cnt = document.getElementById("paragraf");
+//   switch (lng) {
+//     case "en":
+//       cnt.innerHTML = "englseski";
+//     break;
+//     case "sr":
+//       cnt.innerHTML = "srpski";
+//     break;
+//     }
+//   }
+// </script>
+// </body>
 
 
 

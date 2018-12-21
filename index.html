@@ -24,10 +24,10 @@
   <img class="header__logo" src="img/header-logo.png" alt="header-logo">
   <p class="header__adress">Kralja Petra I br. 35 Kragujevac</p>
   <ul class="header__links">
-    <li><a>Jelovnik</a></li>
-    <li><a>Informacije</a></li>
-    <li><a>Galerija</a></li>
-    <li><a>Utisci</a></li>
+    <li onclick="jelovnikScroll()"><a>Jelovnik</a></li>
+    <li onclick="informacijeScroll()"><a>Informacije</a></li>
+    <li onclick="galerijaScroll()"><a>Galerija</a></li>
+    <li onclick="utisciScroll()"><a>Utisci</a></li>
     <div class="header__flag-image">
       <img class="header__flag-image__img" src="img/english-flag.png" alt="english-flag">
     </div>
@@ -113,7 +113,7 @@
   <!--/////////////////////// End Shopping Cart ///////////////////////-->
   <div class="content">
     <!--/////////////////////// Menu ///////////////////////-->
-    <div class="content__menu-container">
+    <div class="content__menu-container" id="jelovnik-scroll">
       <div class="content_menu-container__title-main-container">
         <h1 class="content_menu-container__title-main-container__title">Jelovnik</h1>
       </div>
@@ -498,7 +498,7 @@
     </div>
     <!--/////////////////////// End Menu ///////////////////////-->
     <!--/////////////////////// Gallery ///////////////////////-->
-    <div class="content__gallery-container">
+    <div class="content__gallery-container" id="galerija-scroll">
       <div class="content__gallery-container__title-main-container">
         <h1 class="content__gallery-container__title-main-container__title">Galerija</h1>
       </div>
@@ -523,7 +523,7 @@
     </div>
     <!--/////////////////////// End Gallery ///////////////////////-->
     <!--/////////////////////// Utisci //////////////////////////-->
-    <div class="content__comment-container">
+    <div class="content__comment-container" id="utisci-scroll">
       <!-- utisci title -->
       <div class="content__comment-container__title-main-container">
         <h1 class="content__comment-container__title-main-container__title">Utisci</h1>
@@ -598,7 +598,7 @@
     </div>
     <!--/////////////////////// End Utisci //////////////////////////-->
     <!--/////////////////////// Informacije-Mapa //////////////////////////-->
-    <div class="content__information-container">
+    <div class="content__information-container" id="informacije-scroll">
       <!-- informacije title -->
       <div class="content__information-container__title-main-container">
         <h1 class="content__information-container__title-main-container__title">Informacije</h1>
