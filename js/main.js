@@ -68,32 +68,6 @@ function initMap() {
 //////////// End Google Map
 
 
-// za translate sample kod
-//
-// <body>
-// <select id="langselector" onchange="loadlang()">
-//   <option value="en">Engleski</option>
-//   <option value="sr">Srpski</option>
-// </select>
-// <p></p>
-//   <p id="paragraf">srpski</p>
-// <script>
-// function loadlang()
-//   {
-//   var lng = document.getElementById("langselector").value;
-//   var cnt = document.getElementById("paragraf");
-//   switch (lng) {
-//     case "en":
-//       cnt.innerHTML = "englseski";
-//     break;
-//     case "sr":
-//       cnt.innerHTML = "srpski";
-//     break;
-//     }
-//   }
-// </script>
-// </body>
-
 
 
 

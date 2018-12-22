@@ -24,13 +24,18 @@
   <img class="header__logo" src="img/header-logo.png" alt="header-logo">
   <p class="header__adress">Kralja Petra I br. 35 Kragujevac</p>
   <ul class="header__links">
-    <li onclick="jelovnikScroll()"><a>Jelovnik</a></li>
-    <li onclick="informacijeScroll()"><a>Informacije</a></li>
-    <li onclick="galerijaScroll()"><a>Galerija</a></li>
-    <li onclick="utisciScroll()"><a>Utisci</a></li>
-    <div class="header__flag-image">
+    <li class="header__links__jelovnik" onclick="jelovnikScroll()"><a>Jelovnik</a></li>
+    <li class="header__links__informacije" onclick="informacijeScroll()"><a>Informacije</a></li>
+    <li class="header__links__galerija" onclick="galerijaScroll()"><a>Galerija</a></li>
+    <li class="header__links__utisci" onclick="utisciScroll()"><a>Utisci</a></li>
+    <!-- <div class="header__flag-image">
       <img class="header__flag-image__img" src="img/english-flag.png" alt="english-flag">
-    </div>
+    </div> -->
+    <select class="header__links__language-selection" id="langselector" onchange="changeLang()">
+      <!-- <option class="header__links__language-selection__title" selected disabled>Language</option> -->
+      <option value="sr">Srpski</option>
+      <option value="en">English</option>
+    </select>
   </ul>
 </header>
 
@@ -43,37 +48,37 @@
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="dorucakScroll()">
-      <h3 class="category__list-item__item">Doručak</h3>
+      <h3 class="category__list-item__item translate-breakfast">Doručak</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="hladnoPredjeloScroll()">
-      <h3 class="category__list-item__item">Hladno predjelo</h3>
+      <h3 class="category__list-item__item translate-cold-aperetiff">Hladno predjelo</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="toploPredjeloScroll()">
-      <h3 class="category__list-item__item">Toplo predjelo</h3>
+      <h3 class="category__list-item__item translate-hot-aperetiff">Toplo predjelo</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="salateScroll()">
-      <h3 class="category__list-item__item">Salate</h3>
+      <h3 class="category__list-item__item translate-salad">Salate</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="obrokSalateScroll()">
-      <h3 class="category__list-item__item">Obrok salate</h3>
+      <h3 class="category__list-item__item translate-salad-meals">Obrok salate</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="piceScroll()">
-      <h3 class="category__list-item__item">Pice</h3>
+      <h3 class="category__list-item__item translate-pizza">Pice</h3>
     </div>
     <!-- item -->
     <div class="category__list-item" onclick="pasteScroll()">
-      <h3 class="category__list-item__item">Paste</h3>
+      <h3 class="category__list-item__item translate-pasta">Paste</h3>
     </div>
     <!--/////////////////////// Baner ///////////////////////-->
     <div class="banner">
       <!-- title -->
       <div class="banner__title-main-container">
-        <h1 class="banner__title-main-container__title">specijalitet dana</h1>
+        <h1 class="banner__title-main-container__title translate-banner-title">specijalitet dana</h1>
       </div>
       <!-- subtitle -->
       <div class="banner__subtitle-main-container">
@@ -107,7 +112,7 @@
     </div>
     <!-- combined item price -->
     <div class="shopping-cart__combined-price">
-      <h3>Ukupno:180,00 rsd</h3>
+      <h3><span class="shopping-cart__combined-price__text">Ukupno:</span>180,00 rsd</h3>
     </div>
   </div>
   <!--/////////////////////// End Shopping Cart ///////////////////////-->
@@ -583,16 +588,16 @@
       <!-- e-mail form -->
       <div class="content__comment-container__form-container">
         <form action="">
-          <label for="name">Puno Ime</label>
+          <label class="content__comment-container__form-container__name-label" for="name">Puno Ime</label>
           <input class="content__comment-container__form-container__input" type="text" id="name" name="name" placeholder="puno ime">
 
           <label for="email">E-mail</label>
           <input class="content__comment-container__form-container__input" type="text" id="email" name="lastname" placeholder="e-mail">
 
-          <label for="comment">Tekst Komentara</label>
+          <label class="content__comment-container__form-container__comment-text" for="comment">Tekst Komentara</label>
           <input class="content__comment-container__form-container__input input--comment" type="text" id="comment" name="lastname" placeholder="tekst komentara...">
 
-          <input class="content__comment-container__form-container__input" type="submit" value="Postavite komentar">
+          <input class="content__comment-container__form-container__input translate-comment-button" type="submit" value="Postavite komentar">
         </form>
       </div>
     </div>
@@ -610,13 +615,13 @@
       </div>
       <!-- adress -->
       <div class="content__information-container__adress-container">
-        <h3><span style="color:#a40a0a; text-transform:uppercase">Adresa:</span>  Kralja Petra 1 br, 35 Kragujevac</h3>
-        <h3><span style="color:#a40a0a; text-transform:uppercase">telefon:</span> 011 33 44 55</h3>
-        <h3><span style="color:#a40a0a; text-transform:uppercase">dostava:</span> 011 66 77 88</h3>
+        <h3><span class="translate-adress" style="color:#a40a0a; text-transform:uppercase">Adresa:</span>  Kralja Petra 1 br, 35 Kragujevac</h3>
+        <h3><span class="translate-phone" style="color:#a40a0a; text-transform:uppercase">telefon:</span> 011 33 44 55</h3>
+        <h3><span class="translate-delivery" style="color:#a40a0a; text-transform:uppercase">dostava:</span> 011 66 77 88</h3>
       </div>
       <!-- working hours -->
       <div class="content__information-container__working-hours-container">
-        <table class="content__information-container__working-hours-container__table">
+        <table id="translate-table-container" class="content__information-container__working-hours-container__table">
           <!-- table titles -->
           <tr><th>Dani u nedelji:</th><th>Radno vreme:</th><th>Naručivanje:</th><th>Dostava:</th></tr>
           <!-- table items -->
@@ -651,7 +656,7 @@
       <i class="fab fa-linkedin"></i>
       <i class="fab fa-tumblr-square"></i>
       <br>
-      <p>posetite socijalne mreže</p>
+      <p class="footer__social-text">posetite socijalne mreže</p>
     </div>
 
   </div>
@@ -661,5 +666,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_YMLN9OsAJV0WRNMmWFb6SWf0_UGRzjI&callback=initMap"async defer></script>
 <!-- javascript -->
 <script src="js/main.js"></script>
+<!-- translation -->
+<script src="js/translation.js"></script>
 </body>
 </html>

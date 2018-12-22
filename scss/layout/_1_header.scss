@@ -34,7 +34,7 @@ header {
 .header__links {
   color: $white;
   height: 150px;
-  margin-top: 75px;
+  margin-top: 85px;
   list-style-type: none;
   font-size: 1.5em;
   font-weight: 300;
@@ -46,9 +46,9 @@ header {
     margin-right: 20px;
     &:hover {
       cursor: pointer;
-      padding-bottom: 7px;
-      // color: $gray2;
-      border-bottom: 4px solid $white;
+      // padding-bottom: 7px;
+      color: $light-brown;
+      // border-bottom: 4px solid $white;
       @media screen and (max-width: 800px) {
         border-bottom: none;
         padding-bottom: 10px;
@@ -69,14 +69,52 @@ header {
   }
 }
 
-.header__flag-image {
-  display: inline-block;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  // background-color: red;
-  // padding-top: 20px;
-  &:hover {
-    cursor: pointer;
+.header__links__language-selection {
+  width: auto;
+  border: none;
+  background: none;
+  color: $light-brown;
+  font-size: 1em;
+  font-weight: lighter;
+  // display: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  &:focus {outline:0;} // remove blue border in chrome
+  &:hover { cursor: pointer; }
+  option {
+    font-size: 0.8em;
+    color: $light-brown;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    background-color: $light-brown;
+    padding: 10px;
+    border-radius: 15px;
+    // width: 100px;
+  }
+  &:before {
+    content: "\f13a";
+    font-family: "Font Awesome 5 Free";
+    font-size: 0.8em;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }
+
+.header__links__language-selection__title { display: none; }
+
+// .header__flag-image {
+//   display: inline-block;
+//   position: relative;
+//   width: 100px;
+//   height: 100px;
+//   // background-color: red;
+//   // padding-top: 20px;
+//   &:hover {
+//     cursor: pointer;
+//   }
+// }
