@@ -22,14 +22,14 @@ function changeLang() { // main translation function
       document.getElementsByClassName("translate-salad")[0].innerHTML = "Salads";
       document.getElementsByClassName("translate-salad-meals")[0].innerHTML = "Salad meals";
       document.getElementsByClassName("translate-pizza")[0].innerHTML = "Pizza";
-      document.getElementsByClassName("translate-pasta")[0].innerHTML = "translate-pasta";
+      document.getElementsByClassName("translate-pasta")[0].innerHTML = "Pasta";
       // banner
       document.getElementsByClassName("translate-banner-title")[0].innerHTML = "Today's specialty";
       // shopping cart
       document.getElementsByClassName("shopping-cart__title-main-container__title")[0].innerHTML = "Shopping cart";
       document.getElementsByClassName("shopping-cart__combined-price__text")[0].innerHTML = "Total:";
       // menu
-      document.getElementById("dorucak-menu-scroll").getElementsByTagName("h1").innerHTML = "Breakfast";
+      document.getElementById("dorucak-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Breakfast";
       document.getElementById("hladno-predjelo-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Cold Aperitif";
       document.getElementById("toplo-predjelo-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Hot Aperitif";
       document.getElementById("salate-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Salads";

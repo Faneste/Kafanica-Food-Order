@@ -67,7 +67,10 @@ function initMap() {
 
 //////////// End Google Map
 
-
+function testParent(e) {
+  let mainElement = e.currentTarget.parentElement.parentElement;
+  console.log(mainElement.childNodes[5].childNodes[1].dataset.price);
+}
 
 
 
