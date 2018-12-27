@@ -104,18 +104,33 @@
       <h1 class="shopping-cart__title-main-container__title">Moja korpa</h1>
     </div>
     <!-- item -->
-    <div class="shopping-cart__item">
+    <!-- <div class="shopping-cart__item">
       <h2 class="shopping-cart__item-title">Omlet do tri jaja</h2>
       <h3 class="shopping-cart__item-ingredients">prilozi: paradajz, sir, kecap</h3>
       <h3 class="shopping-cart__item-price">180,00</h3>
-      <button class="shopping-cart__item__delete-button"><i class="fas fa-trash-alt"></i></button>
-    </div>
+      <button class="shopping-cart__item__delete-button"></button>
+    </div> -->
     <!-- combined item price -->
     <div class="shopping-cart__combined-price">
-      <h3><span class="shopping-cart__combined-price__text">Ukupno:</span>180,00 rsd</h3>
+      <h3><span class="shopping-cart__combined-price__text">Ukupno:</span><span id="shopping-cart__combined-price__number">0 rsd</span></h3>
     </div>
+    <!-- dostava/preuzimanje checkbox -->
+    <form class="shopping-cart__form-checkbox" action="">
+      <input class="shopping-cart__form-checkbox__dostava" checked type="radio" name="dostavaCheckbox" value="dostava">Dostava
+      <input class="shopping-cart__form-checkbox__preuzimanje" type="radio" name="dostavaCheckbox" value="preuzimanje">Lično preuzimanje
+    </form>
+    <button class="shopping-cart__order-button" onclick="orderItems()">Poručite</button>
   </div>
   <!--/////////////////////// End Shopping Cart ///////////////////////-->
+  <!--/////////////////////// Modal ///////////////////////-->
+  <div id="modal" class="modal">
+  <!-- Modal content -->
+    <div class="modal__content">
+      <span class="modal__content__close-button">&times;</span>
+      <p class="modal__content__inner-content"></p>
+    </div>
+  </div>
+  <!--/////////////////////// End Modal ///////////////////////-->
   <div class="content">
     <!--/////////////////////// Menu ///////////////////////-->
     <div class="content__menu-container" id="jelovnik-scroll">
@@ -130,12 +145,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -146,7 +159,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->

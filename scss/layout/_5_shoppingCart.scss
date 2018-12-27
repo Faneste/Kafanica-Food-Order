@@ -9,7 +9,8 @@
   margin: 0px auto;
   margin-top: 50px;
   width: 90%;
-  height: auto;
+  max-height: 80vh;
+  overflow-y: auto;
   // padding-bottom: 30px;
   background-color: $white;
   @include shadowBorder;
@@ -76,6 +77,10 @@
   margin-right: 8px;
   position: relative;
   margin-top: -25px;
+  &:before {
+    content: "\f2ed";
+    font-family: "Font Awesome 5 Free";
+  }
   &:hover {
     color: $light-brown;
     cursor: pointer;
@@ -91,12 +96,39 @@
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  border-bottom: 1px solid $gray2;
 }
 
+// checkbox
 
+.shopping-cart__form-checkbox {
+  padding: 10px;
+  border-bottom: 1px solid $gray2;
+  input {
+    margin-right: 5px;
+    // color: $light-brown;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
 
+// order button
 
-
+.shopping-cart__order-button {
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: none;
+  background-color: $light-brown;
+  color: $white;
+  font-weight: 900;
+  font-size: 1em;
+  &:hover {
+    background-color: $dark-brown;
+    cursor: pointer;
+  }
+}
 
 
 
