@@ -138,25 +138,44 @@ function orderItems() { // order items function
   let preuzimanje = document.getElementsByClassName("shopping-cart__form-checkbox__preuzimanje")[0]; // checkbox values
   // treba za dostava i preuzimanje da bude if dostava.checked itd
 
+  // modal inner content
   let modalInnerContent = document.getElementsByClassName("modal__content__inner-content")[0]; // modal innerHTML
-  modalInnerContent.innerHTML = "";
+  modalInnerContent.innerHTML = ""; // reset inner content to be put again
+  let itemsArray = document.getElementsByClassName("shopping-cart__item"); // get array of all html elements (html collection)
+  console.log(itemsArray);
 
-
-
-  let itemsArray = document.getElementsByClassName("shopping-cart__item"); // item arrays
-
+  // get item names from html content array/collection and put in modal
   for (let i = 0; i < itemsArray.length; i++) {
-    modalInnerContent.innerHTML = modalInnerContent.innerHTML + "////////" + itemsArray[i].firstChild.innerHTML;
+    modalInnerContent.innerHTML =
+    modalInnerContent.innerHTML +
+    // put item names in modal
+    '<div class="modal__content__inner-content__item">' +
+    itemsArray[i].firstChild.innerHTML +
+    '</div>'
   }
 
+  // put order choice in modal dostava/licno preuzimanje
+  let orderDetail = "";
+  if (modalInnerContent === true) { orderDetail = "Dostava"; }
+  else { orderDetail = "Lično preuzimanje"; }
 
-  // modalInnerContent.innerHTML = "sdsadsadasdasdasd";
+  // put price/order detail in modal
+  let modalPrice = document.getElementById("shopping-cart__combined-price__number");
+  modalInnerContent.innerHTML = modalInnerContent.innerHTML + '<div class="modal__content__inner-content__price">' +
+  'Ukupno: ' +
+  modalPrice.innerHTML +
+  '</div>' +
+  '<div class="modal__content__inner-content__order-detail">' +
+  orderDetail +
+  '</div>';
 
-  // modal
+  // modal create/open/close
   let modal = document.getElementById('modal'); // modal variable
-  let span = document.getElementsByClassName("modal__content__close-button")[0];// close button/x character
-  modal.style.display = "block"; // open the modal
-  span.onclick = function() { modal.style.display = "none"; } // close the modal
+  let closeSpan = document.getElementsByClassName("modal__content__close-button")[0]; // close button/x character
+  let closeButton = document.getElementsByClassName("modal__content__close-button-bottom")[0]; // close button
+  modal.style.display = "block"; // display the modal
+  closeSpan.onclick = function() { modal.style.display = "none"; } // close the modal with x
+  closeButton.onclick = function() { modal.style.display = "none"; } // close the modal with button
 
   window.onclick = function(event) { // close the modal by clicking outside of it
     if (event.target == modal) {
@@ -164,9 +183,6 @@ function orderItems() { // order items function
     }
   }
   // end modal
-
-
-
 }
 
 //////////// End Shopping Cart

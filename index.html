@@ -116,18 +116,28 @@
     </div>
     <!-- dostava/preuzimanje checkbox -->
     <form class="shopping-cart__form-checkbox" action="">
-      <input class="shopping-cart__form-checkbox__dostava" checked type="radio" name="dostavaCheckbox" value="dostava">Dostava
-      <input class="shopping-cart__form-checkbox__preuzimanje" type="radio" name="dostavaCheckbox" value="preuzimanje">Lično preuzimanje
+      <input class="shopping-cart__form-checkbox__dostava" id="dostava-checkbox" checked type="radio" name="dostavaCheckbox" value="dostava">
+      <label for="dostava-checkbox">Dostava</label>
+      <input class="shopping-cart__form-checkbox__preuzimanje" id="licno-preuzimanje-checkbox" type="radio" name="dostavaCheckbox" value="preuzimanje">
+      <label for="licno-preuzimanje-checkbox">Lično preuzimanje</label>
     </form>
     <button class="shopping-cart__order-button" onclick="orderItems()">Poručite</button>
   </div>
   <!--/////////////////////// End Shopping Cart ///////////////////////-->
   <!--/////////////////////// Modal ///////////////////////-->
   <div id="modal" class="modal">
-  <!-- Modal content -->
+
+    <!-- Modal content -->
     <div class="modal__content">
-      <span class="modal__content__close-button">&times;</span>
-      <p class="modal__content__inner-content"></p>
+      <!-- modal title -->
+      <div class="modal__title-main-container">
+        <h1 class="modal__title-main-container__title">Hvala sto naručili</h1>
+        <span class="modal__content__close-button"><i class="fas fa-window-close"></i></span>
+      </div>
+      <!-- modal information -->
+      <div class="modal__content__inner-content"></div>
+      <!-- modal close button -->
+      <div class="modal__content__close-button-bottom">Zatvori</div>
     </div>
   </div>
   <!--/////////////////////// End Modal ///////////////////////-->

@@ -52,6 +52,13 @@
   padding-bottom: 3px;
   padding-left: 10px;
   overflow: hidden;
+  &:hover {
+    cursor: default;
+    background-color: $gray1;
+  }
+  &:hover button {
+    color: $light-brown;
+  }
 }
 
 .shopping-cart__item-title {
@@ -102,13 +109,19 @@
 // checkbox
 
 .shopping-cart__form-checkbox {
-  padding: 10px;
+  padding: 5px;
   border-bottom: 1px solid $gray2;
   input {
-    margin-right: 5px;
+    // margin-right: 5px;
     // color: $light-brown;
     &:hover {
       cursor: pointer;
+    }
+  }
+  label {
+    &:hover {
+      cursor: pointer;
+      color: $light-brown;
     }
   }
 }
