@@ -74,6 +74,7 @@
 .shopping-cart__item-price {
   // margin-top: 5px;
   font-size: 1.4em;
+  color: $light-brown;
 }
 
 .shopping-cart__item__delete-button {
@@ -143,6 +144,30 @@
   }
 }
 
+// to top button
+
+.to-top-button {
+  text-align: center;
+  font-weight: 900;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: $gray2;
+  color: $light-brown;
+  // margin-top: 20px;
+  &:before {
+    content: "\f35b";
+    font-family: "Font Awesome 5 Free";
+  }
+  &:after {
+    content: "\f35b";
+    font-family: "Font Awesome 5 Free";
+  }
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: $gray3;
+  }
+}
 
 
 

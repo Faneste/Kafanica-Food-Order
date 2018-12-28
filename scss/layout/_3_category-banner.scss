@@ -34,15 +34,15 @@
 .banner__subtitle-main-container__title {
   color: $light-brown;
   font-size: 1.2em;
-  padding-top: 3px;
-  padding-bottom: 4px;
+  // padding-top: 3px;
+  // padding-bottom: 4px;
   padding-left: 10px;
   font-weight: 400;
 }
 
 .banner__picture-container {
-  padding: 10px;
-  border-bottom: 1px solid $gray2;
+  // padding: 10px;
+  // border-bottom: 1px solid $gray2;
 }
 
 .banner__picture-container__img {
@@ -53,8 +53,8 @@
 .banner__ingredients-price-main-container {
   border-bottom: 1px solid $gray2;
   padding-left: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  // padding-top: 10px;
+  // padding-bottom: 10px;
 }
 
 .banner__ingredients-price-main-container__ingredients {
@@ -63,18 +63,26 @@
   font-size: 1em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.banner__order-button {
+  background-color: $light-brown;
+  width: 100%;
+  font-weight: 900;
+  // position: absolute;
+  // z-index: 15;
+  display: block;
+  // margin-top: -50px;
+  padding: 5px 0px 5px 0px;
+  border: none;
+  // border-radius: 5px;
+  color: $white;
+  &:hover {
+    cursor: pointer;
+    background-color: $dark-brown;
+  }
+  &:active {
+    background-color: $light-brown;
+  }
+}
 
 
 

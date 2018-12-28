@@ -20,6 +20,25 @@ function showDivs(n) {
 
 //////////// End Slider Gallery
 
+//////////// To Top Button
+
+window.onscroll = function() {scrollFunction()}; // show button when scrooled window
+
+function scrollFunction() { // show button when scrooled window
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    document.getElementById("to-top-button").style.display = "block";
+  } else {
+    document.getElementById("to-top-button").style.display = "none";
+  }
+}
+
+function topFunction() { // scroll to top when clicked
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+//////////// End To Top Button
+
 //////////// Scroll Into View Menu
 
 // Header Scroll
@@ -54,7 +73,7 @@ function pasteScroll(){ paste.scrollIntoView({ behavior: 'smooth' })}
 
 //////////// End Scroll Into View Menu
 
-//////////// Google Map
+//////////// Google Map / doesn't work, requires paying
 
 var map;
 
@@ -101,7 +120,7 @@ function addInformation(e) { // main func. for making item, gathers innerHTML fr
 
   let itemPriceContainer = document.createElement("h3"); // item price
   itemPriceContainer.classList.add("shopping-cart__item-price");
-  itemPriceContainer.innerHTML = itemPrice;
+  itemPriceContainer.innerHTML = itemPrice + " rsd";
   itemContainerDiv.appendChild(itemPriceContainer);
 
   let itemDeleteButton = document.createElement("button"); // item delete button
@@ -156,8 +175,8 @@ function orderItems() { // order items function
 
   // put order choice in modal dostava/licno preuzimanje
   let orderDetail = "";
-  if (modalInnerContent === true) { orderDetail = "Dostava"; }
-  else { orderDetail = "Lično preuzimanje"; }
+  if (dostava.checked === true) { orderDetail = "Način preuzimanja: Dostava"; }
+  if (preuzimanje.checked === true) { orderDetail = "Način preuzimanja: Lično preuzimanje"; }
 
   // put price/order detail in modal
   let modalPrice = document.getElementById("shopping-cart__combined-price__number");

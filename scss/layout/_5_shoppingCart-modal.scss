@@ -2,7 +2,7 @@
  display: none;
  position: fixed;
  z-index: 1;
- // left: 0;
+ left: 0;
  top: 0;
  // padding-top: 5%;
  width: 100%;
@@ -73,12 +73,54 @@
 }
 
 .modal__content__inner-content__order-detail {
+    background-color: $gray2;
   color: $black;
   font-weight: 900;
   font-size: 1.2em;
-  float: right;
-  margin-top: -25px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  // float: right;
+  // margin-top: -25px;
   margin-right: 5px;
+}
+
+// adress form
+.modal__content__form-container {
+  // border-radius: 5px;
+  background-color: $gray1;
+  padding: 10px;
+}
+
+.modal__content__form-container__input[type=text], select {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+  // display: inline-block;
+  border: 1px solid $gray2;
+  // border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.modal__content__form-container__input[type=submit] {
+  // width: 100%;
+  background-color: $light-brown;
+  font-weight: 900;
+  font-size: 1em;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal__content__form-container__input[type=submit]:hover {
+  background-color: $dark-brown;
+}
+
+.input--comment {
+  height: 150px;
 }
 
 // The Close Button
@@ -101,8 +143,8 @@
   font-size: 1.4em;
   font-weight: 900;
   color: $white;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   &:hover {
     background-color: $dark-brown;
     cursor: pointer;

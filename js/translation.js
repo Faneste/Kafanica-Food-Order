@@ -64,7 +64,14 @@ function changeLang() { // main translation function
       document.getElementById("translate-table-container").getElementsByTagName("td")[16].innerHTML = "Friday";
       document.getElementById("translate-table-container").getElementsByTagName("td")[20].innerHTML = "Saturday";
       document.getElementById("translate-table-container").getElementsByTagName("td")[24].innerHTML = "Sunday";
+      // modal
+      document.getElementsByClassName("modal__title-main-container__title")[0].innerHTML = "Your Order";
+      document.getElementsByClassName("name-label-translate")[0].innerHTML = "Full Name";
+      document.getElementsByClassName("phone-label-translate")[0].innerHTML = "Phone";
+      document.getElementsByClassName("adress-label-translate")[0].innerHTML = "Adress";
+      document.getElementsByClassName("text-label-translate")[0].innerHTML = "Comment if you have one";
       // footer
+      document.getElementsByClassName("footer__social-text")[0].innerHTML = "Visit our social networks";
       document.getElementsByClassName("footer__social-text")[0].innerHTML = "Visit our social networks";
     break;
     }
