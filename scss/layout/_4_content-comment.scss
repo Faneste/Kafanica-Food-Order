@@ -2,7 +2,7 @@
   overflow: hidden;
   margin-top: 50px;
   width: 100%;
-  padding-bottom: 30px;
+  // padding-bottom: 30px;
   // height: 900px;
   background-color: $white;
   @include shadowBorder;
@@ -75,6 +75,7 @@
   // border-radius: 5px;
   background-color: $gray1;
   padding: 10px;
+  // display: none;
 }
 
 .content__comment-container__form-container__input[type=text], select {
@@ -87,7 +88,7 @@
   box-sizing: border-box;
 }
 
-.content__comment-container__form-container__input[type=submit] {
+.content__comment-container__form-container__input[type=button] {
   width: 100%;
   background-color: $light-brown;
   font-weight: 900;
@@ -108,11 +109,25 @@
   height: 150px;
 }
 
+// form thank you
 
+.content__comment-container__form-container__thanks-for-comment {
+  display: none;
+  height: 440px;
+  text-align: center;
+  background: url("../img/logo-pattern.png") repeat;
+}
 
+.content__comment-container__form-container__thanks-for-comment__title {
+  padding: 0;
+  padding-top: 200px;
+  // padding-top: 50%;
+}
 
-
-
+.content__comment-container__form-container__thanks-for-comment__subtitle {
+  color: $light-brown;
+  font-weight: 400;
+}
 
 
 

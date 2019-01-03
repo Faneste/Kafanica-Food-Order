@@ -206,7 +206,21 @@ function orderItems() { // order items function
 
 //////////// End Shopping Cart
 
+//////////// Submit Comment
 
+let inputForm = document.getElementsByClassName("content__comment-container__form-container")[0];
+let commentThanks = document.getElementsByClassName("content__comment-container__form-container__thanks-for-comment")[0];
+let nameInput = document.getElementsByClassName("content__comment-container__form-container__input")[0];
+let emailInput = document.getElementsByClassName("content__comment-container__form-container__input")[0];
+let commentInput = document.getElementsByClassName("content__comment-container__form-container__input input--comment")[0];
+
+function commentSubmit() { // form validation / display comment is submitted
+  // treba da se stavi form validation
+  inputForm.style.display = "none";
+  commentThanks.style.display = "block";
+}
+
+//////////// End Submit Comment
 
 
 

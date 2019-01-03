@@ -28,6 +28,8 @@ function changeLang() { // main translation function
       // shopping cart
       document.getElementsByClassName("shopping-cart__title-main-container__title")[0].innerHTML = "Shopping cart";
       document.getElementsByClassName("shopping-cart__combined-price__text")[0].innerHTML = "Total:";
+      document.getElementsByClassName("shopping-cart__form-checkbox__delivery-translate")[0].innerHTML = "Delivery";
+      document.getElementsByClassName("shopping-cart__form-checkbox__takeout-translate")[0].innerHTML = "Take out";
       // menu
       document.getElementById("dorucak-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Breakfast";
       document.getElementById("hladno-predjelo-menu-scroll").getElementsByTagName("h1")[0].innerHTML = "Cold Aperitif";

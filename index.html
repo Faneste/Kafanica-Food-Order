@@ -16,6 +16,9 @@
   <!-- end google font -->
   <!-- font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <!-- ico/favicon -->
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- end ico/favicon -->
   <!-- end font awesome -->
   <title>Kafanica Food Order</title>
 </head>
@@ -119,9 +122,9 @@
     <!-- dostava/preuzimanje checkbox -->
     <form class="shopping-cart__form-checkbox" action="">
       <input class="shopping-cart__form-checkbox__dostava" id="dostava-checkbox" checked type="radio" name="dostavaCheckbox" value="dostava">
-      <label for="dostava-checkbox">Dostava</label>
+      <label class="shopping-cart__form-checkbox__delivery-translate" for="dostava-checkbox">Dostava</label>
       <input class="shopping-cart__form-checkbox__preuzimanje" id="licno-preuzimanje-checkbox" type="radio" name="dostavaCheckbox" value="preuzimanje">
-      <label for="licno-preuzimanje-checkbox">Lično preuzimanje</label>
+      <label class="shopping-cart__form-checkbox__takeout-translate" for="licno-preuzimanje-checkbox">Lično preuzimanje</label>
     </form>
     <button class="shopping-cart__order-button" onclick="orderItems()">Poručite</button>
     <!-- to top button -->
@@ -200,21 +203,9 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-
       <!-- hladno predjelo -->
       <!-- category -->
       <div class="content_menu-container__category-title" id="hladno-predjelo-menu-scroll">
@@ -223,12 +214,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -239,7 +228,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -250,18 +239,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
 
@@ -273,12 +251,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -289,7 +265,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -300,18 +276,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
 
@@ -323,12 +288,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -339,7 +302,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -350,18 +313,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
 
@@ -373,12 +325,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -389,7 +339,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -400,18 +350,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
 
@@ -423,12 +362,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -439,7 +376,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -450,18 +387,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
 
@@ -473,12 +399,10 @@
       <!-- item -->
       <div class="content__menu-container__item-container">
         <h1 class="content__menu-container__item-container__item-name">Omlet 3 jaja</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1326 kalorija | jaja, slanina, sir, kecap, lepinja.
-        </h3>
+        <h3 class="content__menu-container__item-container__item-ingredients">1326 kalorija | jaja, slanina, sir, kecap, lepinja.</h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="180" class="content__menu-container__item-container__item-price">180,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" id="menu-button-firing-from-banner" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -489,7 +413,7 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="210" class="content__menu-container__item-container__item-price">210,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
       <!-- item -->
@@ -500,22 +424,9 @@
         </h3>
         <div class="content__menu-container__item-container__price-button-container">
           <h3 data-price="150" class="content__menu-container__item-container__item-price">150,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
+          <button class="content__menu-container__item-container__order-button" onclick="addInformation(event)"><i class="fas fa-plus-square"></i></button>
         </div>
       </div>
-      <!-- item -->
-      <div class="content__menu-container__item-container">
-        <h1 class="content__menu-container__item-container__item-name">Vegeterijana</h1>
-        <h3 class="content__menu-container__item-container__item-ingredients">
-          1294 kalorija | pelat, biljni sir, šampinjoni, plavi patlidžan, paprika, kukuruz, origano.
-        </h3>
-        <div class="content__menu-container__item-container__price-button-container">
-          <h3 data-price="280" class="content__menu-container__item-container__item-price">280,00rsd</h3>
-          <button class="content__menu-container__item-container__order-button" onclick="testParent(event)"><i class="fas fa-plus-square"></i></button>
-        </div>
-      </div>
-
-
 
     </div>
     <!--/////////////////////// End Menu ///////////////////////-->
@@ -612,10 +523,14 @@
           <input class="content__comment-container__form-container__input" type="text" id="email" name="lastname" placeholder="e-mail">
 
           <label class="content__comment-container__form-container__comment-text" for="comment">Tekst Komentara</label>
-          <input class="content__comment-container__form-container__input input--comment" type="text" id="comment" name="lastname" placeholder="tekst komentara...">
+          <input class="content__comment-container__form-container__input input--comment" type="text" id="comment" name="comment" placeholder="tekst komentara...">
 
-          <input class="content__comment-container__form-container__input translate-comment-button" type="submit" value="Postavite komentar">
+          <input class="content__comment-container__form-container__input translate-comment-button" type="button" value="Postavite komentar" onclick="commentSubmit()">
         </form>
+      </div>
+      <div class="content__comment-container__form-container__thanks-for-comment">
+        <h1 class="content__comment-container__form-container__thanks-for-comment__title">Hvala na komentaru</h1>
+        <h3 class="content__comment-container__form-container__thanks-for-comment__subtitle">komentar će uskoro biti postavljen</h3>
       </div>
     </div>
     <!--/////////////////////// End Utisci //////////////////////////-->
